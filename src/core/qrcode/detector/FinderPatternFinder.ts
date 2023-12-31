@@ -97,12 +97,12 @@ export default class FinderPatternFinder {
         const stateCount = new Int32Array(5);
         for (let i = iSkip - 1; i < maxI && !done; i += iSkip) {
             // Get a row of black/white values
-            stateCount[0] = 0;
-            stateCount[1] = 0;
-            stateCount[2] = 0;
-            stateCount[3] = 0;
-            stateCount[4] = 0;
-            let currentState = 0;
+            stateCount[0] = 0;  // black
+            stateCount[1] = 0;  // white
+            stateCount[2] = 0;  // black
+            stateCount[3] = 0;  // white
+            stateCount[4] = 0;  // black
+            let currentState = 0;  // 現在のピクセルの色の状態を表す
             for (let j = 0; j < maxJ; j++) {
                 if (image.get(j, i)) {
                     // Black pixel
